@@ -9,7 +9,8 @@ export const LOCALES = {
   ca: 'Català',
   ja: '日本語',
   cn: '简体中文',
-  ru: 'Русский'
+  ru: 'Русский',
+  de: 'Deutsch'
 };
 
 /**
