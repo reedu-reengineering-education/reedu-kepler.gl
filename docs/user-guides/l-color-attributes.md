@@ -13,8 +13,7 @@ To choose a palette:
 <img src="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/documentation/l-color-attributes-1.png" alt="toggle" width="300"/>
 <img src="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/documentation/l-color-attributes-2.png" alt="toggle" width="300"/>
 
-
-3) Your color is applied to your map as soon as you select the predefined palette or confirm the choices of customized colors.
+3. Your color is applied to your map as soon as you select the predefined palette or confirm the choices of customized colors.
 
 <img src="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/documentation/l-color-attributes-3.png" alt="toggle" width="500"/>
 

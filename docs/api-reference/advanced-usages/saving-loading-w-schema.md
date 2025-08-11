@@ -13,6 +13,7 @@ Pass the **instanceState** to `SchemaManager.save()`
 - `SchemaManager.save()` will output a JSON blob including data and config.
 
 Under the hood, `SchemaManager.save()` calls `SchemaManager.getDatasetToSave()` and `SchemaManager.getConfigToSave()`
+
 - `SchemaManager.getDatasetToSave()` will output an array of dataset.
 - `SchemaManager.getConfigToSave()` will output a JSON blob of the current config.
 
@@ -32,7 +33,9 @@ const configToSave = KeplerGlSchema.getConfigToSave(state.keplerGl.foo);
 ```
 
 ### Load map
+
 Pass saved data and config to `SchemaManager.load()`
+
 - `SchemaManager.load()` will parsed saved config and data, apply version control, the output can then be passed to `addDataToMap` directly.
 
 Under the hood, `SchemaManager.load()` calls `SchemaManager.parseSavedData()` and `SchemaManager.parseSavedConfig()`

@@ -40,7 +40,7 @@ export const StyleCopyConfig = styled.div.attrs({
 function configStringify(config) {
   // replace true => True; false => False; null => None
   const configStr = JSON.stringify(config, null, 2);
-  return configStr.replace(/: ([a-z]+)/g, function(_, key) {
+  return configStr.replace(/: ([a-z]+)/g, function (_, key) {
     return ': ' + Params[key] || ': ' + key;
   });
 }

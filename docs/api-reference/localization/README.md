@@ -4,7 +4,7 @@ Kepler.gl supports localization through [react-intl]. Locale is determined by `u
 Current supported languages are:
 
 | locale code | Language   | Default? |
-|-------------|------------|----------|
+| ----------- | ---------- | -------- |
 | en          | English    | default  |
 | fi          | Finnish    |          |
 | pt          | Portuguese |          |
@@ -46,18 +46,20 @@ Let's say we want to add the Swedish language to kepler.gl. Easiest way to add t
 - Update _LOCALES_ in `src/localization/locales.js` to include new language translation:
   ```javascript
   export const LOCALES = {
-    en : 'English',
-    fi : 'Suomi',
+    en: 'English',
+    fi: 'Suomi',
     pt: 'Português',
     // add Swedish language
     sv: 'Svenska'
-  }
+  };
   ```
 
 ## Modify default translation or add new translation
+
 the `localeMessages` prop of `KeplerGl` takes additional translations and merge with default translation.
 
 #### Example 1. Update default translation
+
 To update the english translation of `layerManager.addData`, pass `localeMessages` like this.
 
 ```javascript
@@ -67,15 +69,11 @@ const localeMessages = {
   }
 };
 
-const App = () => (
-    <KeplerGl
-      id="map"
-      localeMessages={messages}
-      mapboxApiAccessToken={Token}
-    />
-);
+const App = () => <KeplerGl id="map" localeMessages={messages} mapboxApiAccessToken={Token} />;
 ```
+
 #### Example 2. Pass additional translation
+
 Sometimes together with dependency injection, you might need to add additional translations to the customized component. For example, adding an additional `settings` panel in the side panel, you will need to provide a translation for the panel name assigned to `sidebar.panels.settings`
 
 ```javascript
@@ -85,13 +83,7 @@ const localeMessages = {
   }
 };
 
-const App = () => (
-    <KeplerGl
-      id="map"
-      localeMessages={messages}
-      mapboxApiAccessToken={Token}
-    />
-);
+const App = () => <KeplerGl id="map" localeMessages={messages} mapboxApiAccessToken={Token} />;
 ```
 
 [react-intl]: https://github.com/formatjs/react-intl

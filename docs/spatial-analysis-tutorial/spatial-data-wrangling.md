@@ -53,8 +53,8 @@ Here we will use the AI Assistant to load the data and create a polygon layer.
 Can you create a map layer from https://geodacenter.github.io/data-and-lab/data/chicago_commpop.geojson
 ?
 ```
-<img width="1087" alt="Screenshot 2025-05-30 at 4 06 36 PM" src="https://github.com/user-attachments/assets/f0ac871e-a321-47e8-9e7c-e635d16cc250" />
 
+<img width="1087" alt="Screenshot 2025-05-30 at 4 06 36 PM" src="https://github.com/user-attachments/assets/f0ac871e-a321-47e8-9e7c-e635d16cc250" />
 
 ### Point Layer
 
@@ -89,7 +89,6 @@ Can you create a map layerfrom https://geodacenter.github.io/data-and-lab/data/c
 As you can see in the screenshot above, the AI Assistant confirms with you what type of map layer you want to create. Then, it performs fetching the data from the URL. However, it is not sure about which columns should be used for latitude and longitude coordinates since the columns in the csv file are "XCoord" and "YCoord" not named as "latitude" and "longitude".
 
 In the GeoDa workbook, you will need to specify the latitude/longitude columns in the configuration UI. However, with AI assistant, you can simply ask it to guess the columns based on the data. Once you confirm that you want to guess the columns, the AI Assistant successfully identifies the appropriate columns and creates the point layer, showing the grocery store locations as points on the map.
-
 
 ## Grid
 
@@ -146,7 +145,7 @@ Can you change the column NOSOUTH to integer type and save it in a new dataset?
 <img width="1146" alt="Screenshot 2025-06-06 at 4 13 37 PM" src="https://github.com/user-attachments/assets/df1ccc5b-e4f7-43ec-a120-95b135046c5f" />
 
 :::info
-The AI Assistant calls the `tableTool` to achieve the goal. You can click to expand the `tableTool` to see the details of the tool. This tool uses a SQL query  and a in-memory duckdb database to manipulate the data in the table e.g. `SELECT _geojson, ..., CAST(NOSOUTH AS VARCHAR) AS NOSOUTH, ... FROM natregimes_geojson_123456`. The result arrow object is a duckdb table, which can be used to create a new dataset in Kepler.gl.
+The AI Assistant calls the `tableTool` to achieve the goal. You can click to expand the `tableTool` to see the details of the tool. This tool uses a SQL query and a in-memory duckdb database to manipulate the data in the table e.g. `SELECT _geojson, ..., CAST(NOSOUTH AS VARCHAR) AS NOSOUTH, ... FROM natregimes_geojson_123456`. The result arrow object is a duckdb table, which can be used to create a new dataset in Kepler.gl.
 :::
 
 ### Other variable operations
@@ -156,6 +155,7 @@ The other variable operations, like add a variable, delete a variable or rename 
 ## Calculator
 
 The calculator functionality is to create a new variable with:
+
 - special functions
 - univariate and bivariate operations
 - spatial lag
@@ -175,6 +175,7 @@ Can you load a dataset from https://geodacenter.github.io/data-and-lab/data/comm
 ##### Special
 
 The three Special functions are:
+
 - **NORMAL**: generate random numbers with normal distribution
 - **UNIFORM RANDOM**: generate random numbers with uniform distribution
 - **ENUMERATE**: generate a sequence of numbers, which is especially useful to retain the order of observations after sorting on a given variable
@@ -196,6 +197,7 @@ AI Assistant can make mistakes by trying to generate complex SQL query to add va
 ##### Univariate
 
 In Kepler.gl AI Assistant, there are six straightforward univariate transformations:
+
 - **NEGATIVE**: changing the sign
 - **INVERSE**: taking the inverse
 - **SQUARE ROOT**: taking the square root
@@ -216,6 +218,7 @@ Since the `tableTool` uses DuckDB to manipulate the data, it can support more un
 ##### Variable Standardization
 
 The univariate operations also include five types of variable standardization:
+
 - **STANDARDIZED (Z)**
 - **DEVIATION FROM MEAN**
 - **STANDARDIZED (MAD)**
@@ -301,6 +304,7 @@ We bring up the data table and note the variable Date in the seventh column. We 
 ```
 Can you create a new variable called "YEAR" and assign the year of the Date to it?
 ```
+
 <img width="1030" alt="Screenshot 2025-06-07 at 10 05 26 PM" src="https://github.com/user-attachments/assets/e6a5a6aa-b67c-4c68-ab15-d5b1da5dac73" />
 
 :::note
@@ -347,13 +351,18 @@ With the AI Assistant, you can easily query the dataset by just prompting.
 Load the sf_cartheft.geojson file to create a point layer.
 
 ```
+
 Can you create a map layer from https://geodacenter.github.io/data-and-lab/data/sf_cartheft.geojson?
+
 ```
 
 Then, you can query the dataset by just prompting.
 
 ```
+
 Can you query the sf_cartheft dataset in October?
+
 ```
 
 <img width="1038" alt="Screenshot 2025-06-08 at 4 52 41 PM" src="https://github.com/user-attachments/assets/f015581c-47aa-4d9c-9599-03041af56a5a" />
+```

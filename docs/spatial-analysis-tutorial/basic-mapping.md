@@ -6,7 +6,7 @@ Original GeoDa lab by Luc Anselin: https://geodacenter.github.io/workbook/3a_map
 
 In this Chapter, we will explore a range of mapping and geovisualization options. We start with a review of common thematic map classifications. We next focus on different statistical maps, in particular maps that are designed to highight extreme values or outliers. We also illustrate maps for categorical variables (unique value maps), and their extension to multiple categories in the form of co-location maps. We close with a review of some special approaches to geovisualization, i.e., ~~conditional maps~~, the cartogram and map animation.
 
- The main objective is to use the maps to interact with the data as part of the exploration process.
+The main objective is to use the maps to interact with the data as part of the exploration process.
 
 ## Preliminaries
 
@@ -55,7 +55,6 @@ Can you update the colors of the layers using colorBrewer's 4-class YlOrBr color
 ```
 
 <img width="1068" alt="Screenshot 2025-06-12 at 2 37 01 PM" src="https://github.com/user-attachments/assets/44dbf94c-314a-4798-98db-b576763c3b91" />
-
 
 You can further explore the quantile results by querying the number of areas in each category:
 
@@ -126,7 +125,6 @@ Finally, we illustrate the equivalence between the two graphs by selecting a cat
 :::note
 The linking is now way one for now: from plot to map. The two-way linking is not supported yet.
 :::
-
 
 ### Map options
 
@@ -245,7 +243,6 @@ Can you create a box map for the variable 'kids2000' with the hinge criterion of
 
 <img width="1115" alt="Screenshot 2025-06-13 at 3 37 59 PM" src="https://github.com/user-attachments/assets/8a98b93a-16ce-422a-bd31-3a89d9b31da8" />
 
-
 Then, you can save the categories from the box map result into a new column. For example:
 
 ```
@@ -254,17 +251,16 @@ Can you save the 6 categories (index starts from 1) into a new column "kidscat" 
 
 <img width="1117" alt="Screenshot 2025-06-13 at 6 23 32 PM" src="https://github.com/user-attachments/assets/4d8d61a7-4e5d-488b-a729-193b7f530a22" />
 
-
 :::tip
 Expand the 'tableTool' function calling to see the result. The AI Assistant uses the following SQL query to get the categories:
 
 SELECT ..., CASE
-  WHEN KIDS2000 < 10.8864 THEN 1
-  WHEN KIDS2000 >= 10.8864 AND KIDS2000 < 30.090975 THEN 2
-  WHEN KIDS2000 >= 30.090975 AND KIDS2000 < 38.2278 THEN 3
-  WHEN KIDS2000 >= 38.2278 AND KIDS2000 < 42.894025 THEN 4
-  WHEN KIDS2000 >= 42.894025 AND KIDS2000 < 62.0986 THEN 5
-  WHEN KIDS2000 >= 62.0986 THEN 6
+WHEN KIDS2000 < 10.8864 THEN 1
+WHEN KIDS2000 >= 10.8864 AND KIDS2000 < 30.090975 THEN 2
+WHEN KIDS2000 >= 30.090975 AND KIDS2000 < 38.2278 THEN 3
+WHEN KIDS2000 >= 38.2278 AND KIDS2000 < 42.894025 THEN 4
+WHEN KIDS2000 >= 42.894025 AND KIDS2000 < 62.0986 THEN 5
+WHEN KIDS2000 >= 62.0986 THEN 6
 END AS kidscat FROM nyctable;
 :::
 
@@ -281,11 +277,13 @@ Then, you can do the same for the variable `pubast00` to save the categories int
 ```
 Can you create a box map for the variable 'pubast00' with the hinge criterion of 1.5 using BuRd color scheme?
 ```
+
 <img width="1115" alt="Screenshot 2025-06-13 at 6 32 29 PM" src="https://github.com/user-attachments/assets/64ce96f9-bf52-4358-9dc4-7ad97e1f0030" />
 
 ```
 Can you save the categories (index starts from 1) into a new column "asstcat" from the box map result?
 ```
+
 <img width="1115" alt="Screenshot 2025-06-13 at 6 34 19 PM" src="https://github.com/user-attachments/assets/0fdca743-5756-4342-bdbb-ead587477c7b" />
 
 To replicate the same result in the original GeoDa lab, you can use the following prompt:
@@ -293,6 +291,7 @@ To replicate the same result in the original GeoDa lab, you can use the followin
 ```
 Can you create a unique values map using 'asstcat' in the new dataset with Paired color scheme?
 ```
+
 <img width="1112" alt="Screenshot 2025-06-13 at 6 35 39 PM" src="https://github.com/user-attachments/assets/ad9f7a0e-5491-43a8-bb6e-2502a9061303" />
 
 ### Co-location Map
@@ -312,6 +311,7 @@ Can you create a unique values map using 'co_location' in the new dataset with P
 <img width="1114" alt="Screenshot 2025-06-13 at 6 52 16 PM" src="https://github.com/user-attachments/assets/a31d0c07-3003-4a88-beae-b61f8f20ed83" />
 
 The above steps show how to create a co-location map of two variables step by step:
+
 - create a categorical variable from a continuous variable A using e.g. box map
 - create a categorical variable from a continuous variable B using the same method
 - compare the two categorical variables and save the result into a new column 'co_location' to a new dataset
@@ -349,8 +349,8 @@ Can you create a new map layer using the variable 'kids2000' with the break poin
 
 <img width="1152" alt="Screenshot 2025-06-16 at 11 53 44 AM" src="https://github.com/user-attachments/assets/eef1834e-e4c0-4ab1-84b1-50a8937b1a86" />
 
-
 Tip: to create a custom classification, what you need to prompt includes:
+
 - the variable name
 - the custom break values
 - the color scheme (optional)

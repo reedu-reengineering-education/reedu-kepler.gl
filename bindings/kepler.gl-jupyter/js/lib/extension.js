@@ -10,21 +10,23 @@
 // dynamically.
 
 /* eslint-disable no-undef */
-__webpack_public_path__ = `${document.querySelector('body').getAttribute('data-base-url')  }nbextensions/keplergl-jupyter`;
+__webpack_public_path__ = `${document
+  .querySelector('body')
+  .getAttribute('data-base-url')}nbextensions/keplergl-jupyter`;
 /* eslint-enable no-undef */
 
 // Configure requirejs
 if (window.require) {
-    window.require.config({
-        map: {
-            "*" : {
-                "keplergl-jupyter": "nbextensions/keplergl-jupyter/index"
-            }
-        }
-    });
+  window.require.config({
+    map: {
+      '*': {
+        'keplergl-jupyter': 'nbextensions/keplergl-jupyter/index'
+      }
+    }
+  });
 }
 
 // Export the required load_ipython_extension
 module.exports = {
-    load_ipython_extension() {}
+  load_ipython_extension() {}
 };

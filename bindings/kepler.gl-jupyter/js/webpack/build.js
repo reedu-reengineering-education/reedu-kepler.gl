@@ -17,4 +17,4 @@ module.exports = [
   },
   config.umd,
   config.html
- ];
+];

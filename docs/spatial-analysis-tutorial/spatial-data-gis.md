@@ -132,7 +132,7 @@ Can you aggregate the counties into the states based on the STFIPS and aggregate
 
 ## Multi-Layer Support
 
-Kepler.gl supports multi-layer visualization by default. When you load more datasets, the map layers will be automatically added to current map. You can drag-n-drop the layers to reorder them. This multi-layer infrastructure allows for the  calculation of variables for one layer, based on the observations in a different layer.
+Kepler.gl supports multi-layer visualization by default. When you load more datasets, the map layers will be automatically added to current map. You can drag-n-drop the layers to reorder them. This multi-layer infrastructure allows for the calculation of variables for one layer, based on the observations in a different layer.
 
 ```
 Load the dataset https://geodacenter.github.io/data-and-lab/data/chicago_commpop.geojson
@@ -143,7 +143,6 @@ Load the dataset https://geodacenter.github.io/data-and-lab/data/chicago_sup.geo
 ```
 
 <img width="1242" alt="Screenshot 2025-06-11 at 10 39 16 PM" src="https://github.com/user-attachments/assets/19c2d82c-4551-48bb-944f-e23093a0c2eb" />
-
 
 ## Spatial Join
 
@@ -177,7 +176,6 @@ Can you spatial join the points to the community areas and count the number of p
 You can click on the spatialJoin tool to see the details of how spatial join tool has been applied on the datasets.
 :::
 
-
 ### Spatial join with aggregation
 
 We can also carry out an aggregation over the points in each area. For example, when joining the points to the community areas, we can aggregate the points by the mean of the variable `NEAR_DIST` to get e.g. the nearest distance of the supermarkets in each community area.
@@ -189,6 +187,5 @@ Can you spatial join the points to the community areas and aggregate the mean va
 <img width="1240" alt="Screenshot 2025-06-11 at 11 11 08 PM" src="https://github.com/user-attachments/assets/c28b8627-993c-4408-9592-fd2a3c989893" />
 
 The aggregation options that are supported now include: COUNT, SUM, MEAN, MIN, MAX, UNIQUE.
-
 
 ## ~~Linked Multi-Layers~~

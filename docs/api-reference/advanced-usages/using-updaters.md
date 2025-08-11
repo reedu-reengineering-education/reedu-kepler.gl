@@ -1,6 +1,6 @@
 # Using Updaters
-Updaters are state transition functions that mapped to actions. One action can map to multiple state updaters, each belongs to a subreducer.
 
+Updaters are state transition functions that mapped to actions. One action can map to multiple state updaters, each belongs to a subreducer.
 
 This action-updater pattern allows a user to import a specific action updater in the app's root reducer and use it to directly modify kepler.gl’s state without dispatching the action. This will give user a lot of freedom to control over kepler.gl's state transition.
 
@@ -13,7 +13,7 @@ import {togglePerspective} from '@kepler.gl/actions';
 const MapContainer = ({dispatch}) => (
   <div>
     <button onClick={() => dispatch(togglePerspective())} />
-    <KeplerGl id="foo"/>
+    <KeplerGl id="foo" />
   </div>
 );
 ```

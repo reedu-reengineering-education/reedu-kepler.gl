@@ -44,22 +44,21 @@ which will be shallow **merged** with default initial state.
 
 Default subreducer state:
 
--   [`visState`][19]
--   [`mapState`][20]
--   [`mapStyle`][21]
--   [`uiState`][22]
+- [`visState`][19]
+- [`mapState`][20]
+- [`mapStyle`][21]
+- [`uiState`][22]
 
 **Parameters**
 
--   `iniSt` **[Object][23]** custom state to be merged with default initial state
+- `iniSt` **[Object][23]** custom state to be merged with default initial state
 
 **Examples**
 
 ```javascript
-const myKeplerGlReducer = keplerGlReducer
- .initialState({
-   uiState: {readOnly: true}
- });
+const myKeplerGlReducer = keplerGlReducer.initialState({
+  uiState: {readOnly: true}
+});
 ```
 
 ### keplerGlReducer.plugin
@@ -74,32 +73,37 @@ You should only use this to adding additional actions instead of replacing defau
 
 **Parameters**
 
--   `customReducer` **([Object][23] \| [Function][24])** A reducer map or a reducer
+- `customReducer` **([Object][23] \| [Function][24])** A reducer map or a reducer
 
 **Examples**
 
 ```javascript
 const myKeplerGlReducer = keplerGlReducer
- .plugin({
-   // 1. as reducer map
-   HIDE_AND_SHOW_SIDE_PANEL: (state, action) => ({
-     ...state,
-     uiState: {
-       ...state.uiState,
-       readOnly: !state.uiState.readOnly
-     }
-   })
- })
-.plugin(handleActions({
-  // 2. as reducer
-  'HIDE_MAP_CONTROLS': (state, action) => ({
-    ...state,
-    uiState: {
-      ...state.uiState,
-      mapControls: hiddenMapControl
-    }
+  .plugin({
+    // 1. as reducer map
+    HIDE_AND_SHOW_SIDE_PANEL: (state, action) => ({
+      ...state,
+      uiState: {
+        ...state.uiState,
+        readOnly: !state.uiState.readOnly
+      }
+    })
   })
-}, {}));
+  .plugin(
+    handleActions(
+      {
+        // 2. as reducer
+        HIDE_MAP_CONTROLS: (state, action) => ({
+          ...state,
+          uiState: {
+            ...state.uiState,
+            mapControls: hiddenMapControl
+          }
+        })
+      },
+      {}
+    )
+  );
 ```
 
 ## mapStateLens
@@ -109,7 +113,7 @@ Connect subreducer `mapState`, used with `injectComponents`. Learn more at
 
 **Parameters**
 
--   `reduxState` **any**
+- `reduxState` **any**
 
 ## mapStyleLens
 
@@ -118,7 +122,7 @@ Connect subreducer `mapStyle`, used with `injectComponents`. Learn more at
 
 **Parameters**
 
--   `reduxState` **any**
+- `reduxState` **any**
 
 ## providerStateLens
 
@@ -127,7 +131,7 @@ Connect subreducer `providerState`, used with `injectComponents`. Learn more at
 
 **Parameters**
 
--   `reduxState` **any**
+- `reduxState` **any**
 
 ## uiStateLens
 
@@ -136,7 +140,7 @@ Connect subreducer `uiState`, used with `injectComponents`. Learn more at
 
 **Parameters**
 
--   `reduxState` **any**
+- `reduxState` **any**
 
 ## visStateLens
 
@@ -145,54 +149,30 @@ Connect subreducer `visState`, used with `injectComponents`. Learn more at
 
 **Parameters**
 
--   `reduxState` **any**
+- `reduxState` **any**
 
 [1]: #keplerglreducer
-
 [2]: #examples
-
 [3]: #keplerglreducerinitialstate
-
 [4]: #parameters
-
 [5]: #examples-1
-
 [6]: #keplerglreducerplugin
-
 [7]: #parameters-1
-
 [8]: #examples-2
-
 [9]: #mapstatelens
-
 [10]: #parameters-2
-
 [11]: #mapstylelens
-
 [12]: #parameters-3
-
 [13]: #providerstatelens
-
 [14]: #parameters-4
-
 [15]: #uistatelens
-
 [16]: #parameters-5
-
 [17]: #visstatelens
-
 [18]: #parameters-6
-
 [19]: ./vis-state.md#INITIAL_VIS_STATE
-
 [20]: ./map-state.md#INITIAL_MAP_STATE
-
 [21]: ./map-style.md#INITIAL_MAP_STYLE
-
 [22]: ./ui-state.md#INITIAL_UI_STATE
-
 [23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
-
 [24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
-
 [25]: ../advanced-usages/replace-ui-component.md#pass-custom-component-props

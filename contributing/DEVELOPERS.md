@@ -68,6 +68,7 @@ On Unix, MacOS
 # install Volta on Unix
 curl https://get.volta.sh | bash
 ```
+
 On Windows
 
 ```bash

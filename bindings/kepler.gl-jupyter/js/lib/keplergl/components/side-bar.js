@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const StyledSideBarContainer = styled.div`
   .side-panel--container {
-    transform:scale(0.85);
+    transform: scale(0.85);
     transform-origin: top left;
     height: 117.64%;
     padding-top: 0;
@@ -30,9 +30,9 @@ const StyledSideBarContainer = styled.div`
 function CustomSidebarFactory() {
   const CloseButton = CollapseButtonFactory();
   const Sidebar = SidebarFactory(CloseButton);
-  const CustomSidebar = (props) => (
+  const CustomSidebar = props => (
     <StyledSideBarContainer>
-      <Sidebar {...props}/>
+      <Sidebar {...props} />
     </StyledSideBarContainer>
   );
   return CustomSidebar;

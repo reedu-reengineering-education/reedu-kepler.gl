@@ -1,7 +1,7 @@
 {
-  "name": "kepler.gl",
+  "name": "reedu-kepler.gl",
   "author": "Shan He <shan@uber.com>",
-  "version": "3.1.9",
+  "version": "1.0.0",
   "description": "kepler.gl is a webgl based application to visualize large scale location data in the browser",
   "license": "MIT",
   "main": "dist/index.js",
@@ -14,7 +14,6 @@
     "visualization",
     "deck.gl"
   ],
-  "private": true,
   "workspaces": [
     "./src/types",
     "./src/constants",
@@ -35,11 +34,12 @@
     "./src/reducers",
     "./src/components",
     "./src/duckdb",
-    "./src/ai-assistant"
+    "./src/ai-assistant",
+    "."
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/keplergl/kepler.gl.git"
+    "url": "git+https://github.com/keplergl/kepler.gl.git"
   },
   "scripts": {
     "bootstrap": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true git submodule update --init --recursive && yarn install && yarn fix-dependencies",

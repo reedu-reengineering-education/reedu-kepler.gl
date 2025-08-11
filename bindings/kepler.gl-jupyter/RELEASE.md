@@ -4,11 +4,11 @@
 
 When release a new version, the `keplergl-jupyter` js module will be published on NPM and the `keplergl` python module will be published on PyPI.
 
-NOTE: __Version number of the js module **`kelergl-jupyter`** and the python module **`keplergl`** should match__
+NOTE: **Version number of the js module **`kelergl-jupyter`** and the python module **`keplergl`** should match**
 
 ### Step1:
 
-Update `version_info` in keplergl/_version.py in bindings/kepler.gl-jupyter folder.
+Update `version_info` in keplergl/\_version.py in bindings/kepler.gl-jupyter folder.
 Update `"version": "0.x.x"` to match the version info in js/package.json in bindings/kepler.gl-jupyter folder.
 Update `EXTENSION_SPEC_VERSION` to match the js module version.
 
@@ -17,7 +17,6 @@ git add keplergl/_version.py
 git add js/package.json
 git commit -am "keplergl==<version>"
 ```
-
 
 ### Step2:
 
@@ -28,7 +27,7 @@ git tag -a <version>-jupyter -m "<version>-jupyter"
 git push origin <version>-jupyter
 ```
 
-The new tag will trigger the Github Action `build-publish-pypi.yml`: __"Build KeplerGL Python and NPM packages"__. The packages will be built and tested, then published to NPM and PyPI using the secret tokens.
+The new tag will trigger the Github Action `build-publish-pypi.yml`: **"Build KeplerGL Python and NPM packages"**. The packages will be built and tested, then published to NPM and PyPI using the secret tokens.
 
 ### Step3:
 
@@ -38,13 +37,13 @@ The new version should be automatically picked and built from PyPi by conda-forg
 
 Edit `meta.yaml` under directory `recipes/`:
 
-* Update the version number
+- Update the version number
 
 ```python
 {% set version = "0.3.0" %}
 ```
 
-* Update the sha256 value of the latest tarball in PyPi that is published in Step2.
+- Update the sha256 value of the latest tarball in PyPi that is published in Step2.
 
 ```python
 source:
@@ -52,4 +51,4 @@ source:
   sha256: cb21047b2104413af1c00ef1ac75794a19e0b578e51c69c86713911d97370167
 ```
 
-* Create a pull request and wait for checking from conda-forge team.
+- Create a pull request and wait for checking from conda-forge team.

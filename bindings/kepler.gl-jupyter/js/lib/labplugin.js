@@ -8,12 +8,11 @@ module.exports = {
   id: 'keplergl-jupyter',
   requires: [base.IJupyterWidgetRegistry],
   activate(app, widgets) {
-      widgets.registerWidget({
-          name: 'keplergl-jupyter',
-          version: keplerglJupyter.version,
-          exports: keplerglJupyter
-      });
+    widgets.registerWidget({
+      name: 'keplergl-jupyter',
+      version: keplerglJupyter.version,
+      exports: keplerglJupyter
+    });
   },
   autoStart: true
 };
-

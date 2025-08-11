@@ -4,7 +4,6 @@
 const config = require('./config');
 
 module.exports = [
-
   // Notebook extension
   config.extension,
 
