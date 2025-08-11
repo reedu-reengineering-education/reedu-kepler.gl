@@ -9,6 +9,7 @@ import ca from './translations/ca';
 import cn from './translations/cn';
 import ja from './translations/ja';
 import ru from './translations/ru';
+import de from './translations/de';
 
 // Flat messages since react-intl does not seem to support nested structures
 // Adapted from https://medium.com/siren-apparel-press/internationalization-and-localization-of-sirenapparel-eu-sirenapparel-us-and-sirenapparel-asia-ddee266066a2
@@ -46,5 +47,6 @@ messages.ca = {...enFlat, ...flattenMessages(ca)};
 messages.cn = {...enFlat, ...flattenMessages(cn)};
 messages.ja = {...enFlat, ...flattenMessages(ja)};
 messages.ru = {...enFlat, ...flattenMessages(ru)};
+messages.de = {...enFlat, ...flattenMessages(de)};
 
 export default messages;
