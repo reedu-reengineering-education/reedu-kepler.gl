@@ -6,7 +6,6 @@ const path = require('path');
 
 const OLD_SCOPE = '@kepler.gl';
 const NEW_SCOPE = '@reedu-kepler.gl';
-const REGISTRY_LINE = `${NEW_SCOPE}:registry=https://registry.npmjs.org`;
 
 const IGNORED_DIRS = ['node_modules', '.git', 'dist', 'build', '.turbo'];
 
@@ -72,20 +71,6 @@ function updatePackageJson(filePath) {
     fs.writeFileSync(filePath, JSON.stringify(pkg, null, 2), 'utf8');
     console.log(`📦 Updated package.json: ${filePath}`);
   }
-
-  const packageDir = path.dirname(filePath);
-  addOrUpdateNpmrc(packageDir);
-}
-
-function addOrUpdateNpmrc(dir) {
-  const npmrcPath = path.join(dir, '.npmrc');
-  let content = '';
-  if (fs.existsSync(npmrcPath)) {
-    content = fs.readFileSync(npmrcPath, 'utf8');
-    if (content.includes(REGISTRY_LINE)) return;
-  }
-  fs.appendFileSync(npmrcPath, REGISTRY_LINE + '\n');
-  console.log(`🛠️  Added/updated .npmrc in: ${dir}`);
 }
 
 // Entry point
@@ -99,9 +84,6 @@ function run() {
       replaceInFile(filePath, `${OLD_SCOPE}/`, `${NEW_SCOPE}/`);
     }
   });
-
-  // Ensure root .npmrc is set too
-  addOrUpdateNpmrc(root);
 
   console.log('\n🎉 Done updating package names and metadata.');
 }
