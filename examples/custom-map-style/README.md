@@ -11,19 +11,13 @@ Read more about [Custom Map Style][custom-map-styles]
 #### 1. Install
 
 ```sh
-npm install
-```
-
-or
-
-```sh
 yarn
 ```
 
 #### 2. Start the app
 
 ```sh
-npm start
+yarn start
 ```
 
 [custom-map-styles]: ./docs/api-reference/advanced-usages/custom-map-styles.md

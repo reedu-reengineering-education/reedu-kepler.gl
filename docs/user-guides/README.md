@@ -26,6 +26,7 @@ This guide will teach you how to perform data analysis in Kepler.gl by adding da
 
 #### [Layers](./c-types-of-layers/README.md)
 
+
 - [Point](./c-types-of-layers/a-point.md)
 - [Arc](./c-types-of-layers/b-arc.md)
 - [Line](./c-types-of-layers/c-line.md)
@@ -39,6 +40,23 @@ This guide will teach you how to perform data analysis in Kepler.gl by adding da
 - [Trip](./c-types-of-layers/k-trip.md)
 - [S2](./c-types-of-layers/l-s2.md)
 - [Vector](./c-types-of-layers/vector.md)
+
+* [Point](./c-types-of-layers/a-point.md)
+* [Arc](./c-types-of-layers/b-arc.md)
+* [Line](./c-types-of-layers/c-line.md)
+* [Grid](./c-types-of-layers/d-grid.md)
+* [Polygon](./c-types-of-layers/e-polygon.md)
+* [Cluster](./c-types-of-layers/f-cluster.md)
+* [Icon](./c-types-of-layers/g-icon.md)
+* [Hexbin](./c-types-of-layers/h-hexbin.md)
+* [Heatmap](./c-types-of-layers/i-heatmap.md)
+* [H3](./c-types-of-layers/j-h3.md)
+* [Trip](./c-types-of-layers/k-trip.md)
+* [S2](./c-types-of-layers/l-s2.md)
+* [Vector Tile Layer](./c-types-of-layers/m-vector-tile-layer.md)
+* [Raster Tile Layer](./c-types-of-layers/n-raster-tile-layer.md)
+* [WMS Layer](./c-types-of-layers/o-wms-layer.md)
+
 
 #### [Layer attributes](./d-layer-attributes.md)
 

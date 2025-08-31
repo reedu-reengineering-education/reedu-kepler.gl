@@ -1,6 +1,6 @@
 # S2 Layer
 
-![S2 Layer](https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/documentation/l-s2.png 'Grid layer')
+![S2 Layer](https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/documentation/l-s2.png 'S2 layer')
 
 To use S2 layer, you need to assign a column containing S2 tokens.
 

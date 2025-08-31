@@ -7,12 +7,15 @@ This example demos how to customize kepler.gl reducer
 
 ### Local dev
 
+<<<<<<< HEAD
 ```
 npm install
 ```
 
 or
 
+=======
+>>>>>>> 7e0d3ced220098275866064309f0d82923d3a534
 ```
 yarn
 ```
@@ -26,5 +29,5 @@ export MapboxAccessToken=<your_mapbox_token>
 then
 
 ```
-npm start
+yarn start
 ```
