@@ -29,7 +29,7 @@ package-lock.json
 npm-debug.log
 .history/
 .yarn
-.npmrc
+
 
 .pnp.*
 .yarn/*
